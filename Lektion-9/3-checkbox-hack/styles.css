@@ -7,6 +7,12 @@
   width: 80%;
   margin: 0 auto;
 }
+.mt {
+  margin-top: 3rem;
+}
+.mb {
+  margin-bottom: 1rem;
+}
 body {
   overflow-x: hidden;
 }
@@ -39,9 +45,11 @@ nav {
   display: inline-block;
 }
 #toggler {
-  /* opacity: 0; */
-  position: absolute;
-  left: -5000px;
+  /* visibility: hidden; */
+  /* display: none; */
+  opacity: 0;
+  /* position: absolute;
+  left: -5000px; */
 }
 .toggler-icon {
   font-size: 1.5rem;
@@ -51,4 +59,58 @@ nav {
 #toggler:checked ~ .navbar-nav {
   /* visibility: visible; */
   transform: translateY(100%) translateX(0);
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-blue {
+  background-color: darkslateblue;
+  color: #fff;
+}
+.btn-green {
+  background-color: rgb(86, 139, 61);
+  color: #fff;
+}
+
+.group {
+  position: relative;
+}
+.popup {
+  position: absolute;
+  border: 1px solid #333;
+  padding: 1rem;
+  box-shadow: 3px 3px 7px 1px #333;
+  top: 0;
+  right: 100px;
+  /* display: none; */
+  /* visibility: hidden; */
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateX(-100px);
+}
+
+.btn:hover + .popup {
+  opacity: 1;
+  transform: translateX(0);
+  /* display: block; */
+  /* visibility: visible; */
+}
+.btn:active + .popup {
+  background-color: yellow;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .4rem;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+.error {
+  color: red;
+  /* display: none; */
+  /* visibility: hidden; */
 }

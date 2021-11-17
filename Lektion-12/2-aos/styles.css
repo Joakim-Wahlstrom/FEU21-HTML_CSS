@@ -1,0 +1,9 @@
+.header-bg {
+  background: url('img/bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mobile {
+  width: 100%;
+}

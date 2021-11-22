@@ -8,6 +8,13 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background: #efe2ff;
+}
+button {
+  background: darkseagreen;
+  padding: .5rem .7rem;
+  border: none;
+  border-radius: 5px;
 }
 .container {
   width: 90%;
@@ -58,10 +65,11 @@ body {
   margin-bottom: 1rem;
 }
 .hero {
-  background: #efe2ff;
+
+  padding-bottom: 3rem;
 }
 .image {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
 }
 .image img {
@@ -69,4 +77,47 @@ body {
 }
 .text-hero {
   text-align: center;
+}
+.text-hero h2 {
+  margin-bottom: 1rem;
+}
+.text-hero button {
+  margin-top: 1rem;
+}
+
+
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text-hero {
+    text-align: left;
+  }
+  .image {
+    margin-left: -8rem;
+  }
+}
+
+@media (min-width: 995px) {
+  .image {
+    width: 50%;
+    margin-left: -6rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .contact .d-flex {
+    flex-direction: column-reverse;
+  }
+  .input-wrapper {
+    padding-right: 0;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .text {
+    text-align: center;
+  }
 }
